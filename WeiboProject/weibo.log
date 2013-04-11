@@ -1,0 +1,362 @@
+6428 DEBUG [2013-04-04 01:10:44]  Sending request: GET /sso/prelogin.php?entry=openapi&callback=sinaSSOController.preloginCallBack&su=d2VzbGV5aHlmdSU0MGdtYWlsLmNvbQ%3D%3D&rsakt=mod&client=ssologin.js(v1.4.5)&_=1365009043584 HTTP/1.1
+6428 DEBUG [2013-04-04 01:10:44]  >> "GET /sso/prelogin.php?entry=openapi&callback=sinaSSOController.preloginCallBack&su=d2VzbGV5aHlmdSU0MGdtYWlsLmNvbQ%3D%3D&rsakt=mod&client=ssologin.js(v1.4.5)&_=1365009043584 HTTP/1.1[\r][\n]"
+6428 DEBUG [2013-04-04 01:10:44]  >> "Host: login.sina.com.cn[\r][\n]"
+6428 DEBUG [2013-04-04 01:10:44]  >> "User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:17.0) Gecko/20100101 Firefox/17.0[\r][\n]"
+6428 DEBUG [2013-04-04 01:10:44]  >> "Accept-Language: en-us[\r][\n]"
+6428 DEBUG [2013-04-04 01:10:44]  >> "Referer: https://api.weibo.com/oauth2/authorize?client_id=3858201645&redirect_uri=http%3A%2F%2F143.89.20.216&response_type=code[\r][\n]"
+6428 DEBUG [2013-04-04 01:10:44]  >> "Accept-Encoding: gzip, deflate[\r][\n]"
+6429 DEBUG [2013-04-04 01:10:44]  >> "Accept: */*[\r][\n]"
+6429 DEBUG [2013-04-04 01:10:44]  >> "Connection: Keep-Alive[\r][\n]"
+6429 DEBUG [2013-04-04 01:10:44]  >> "[\r][\n]"
+6429 DEBUG [2013-04-04 01:10:44]  >> GET /sso/prelogin.php?entry=openapi&callback=sinaSSOController.preloginCallBack&su=d2VzbGV5aHlmdSU0MGdtYWlsLmNvbQ%3D%3D&rsakt=mod&client=ssologin.js(v1.4.5)&_=1365009043584 HTTP/1.1
+6429 DEBUG [2013-04-04 01:10:44]  >> Host: login.sina.com.cn
+6429 DEBUG [2013-04-04 01:10:44]  >> User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:17.0) Gecko/20100101 Firefox/17.0
+6429 DEBUG [2013-04-04 01:10:44]  >> Accept-Language: en-us
+6429 DEBUG [2013-04-04 01:10:44]  >> Referer: https://api.weibo.com/oauth2/authorize?client_id=3858201645&redirect_uri=http%3A%2F%2F143.89.20.216&response_type=code
+6429 DEBUG [2013-04-04 01:10:44]  >> Accept-Encoding: gzip, deflate
+6429 DEBUG [2013-04-04 01:10:44]  >> Accept: */*
+6429 DEBUG [2013-04-04 01:10:44]  >> Connection: Keep-Alive
+6442 DEBUG [2013-04-04 01:10:44]  << "HTTP/1.1 200 OK[\r][\n]"
+6443 DEBUG [2013-04-04 01:10:44]  << "Server: nginx/1.1.17[\r][\n]"
+6443 DEBUG [2013-04-04 01:10:44]  << "Date: Wed, 03 Apr 2013 17:10:44 GMT[\r][\n]"
+6443 DEBUG [2013-04-04 01:10:44]  << "Content-Type: text/html[\r][\n]"
+6443 DEBUG [2013-04-04 01:10:44]  << "Content-Length: 345[\r][\n]"
+6443 DEBUG [2013-04-04 01:10:44]  << "Connection: keep-alive[\r][\n]"
+6443 DEBUG [2013-04-04 01:10:44]  << "Set-Cookie: U_TRS1=00000043.ae744957.515c6294.4a498fc0; path=/; expires=Sat, 01-Apr-23 17:10:44 GMT; domain=.sina.com.cn[\r][\n]"
+6443 DEBUG [2013-04-04 01:10:44]  << "Set-Cookie: U_TRS2=00000043.ae814957.515c6294.fdf9c5ba; path=/; domain=.sina.com.cn[\r][\n]"
+6443 DEBUG [2013-04-04 01:10:44]  << "Pragma: no-cache[\r][\n]"
+6444 DEBUG [2013-04-04 01:10:44]  << "P3P: CP="CURa ADMa DEVa PSAo PSDo OUR BUS UNI PUR INT DEM STA PRE COM NAV OTC NOI DSP COR"[\r][\n]"
+6444 DEBUG [2013-04-04 01:10:44]  << "Cache-Control: no-cache[\r][\n]"
+6444 DEBUG [2013-04-04 01:10:44]  << "Expires: Wed, 03 Apr 2013 17:12:44 GMT[\r][\n]"
+6444 DEBUG [2013-04-04 01:10:44]  << "Vary: Accept-Encoding[\r][\n]"
+6444 DEBUG [2013-04-04 01:10:44]  << "Content-Encoding: gzip[\r][\n]"
+6444 DEBUG [2013-04-04 01:10:44]  << "DPOOL_HEADER: 10.81.11.68[\r][\n]"
+6444 DEBUG [2013-04-04 01:10:44]  << "SINA-LB: aGsxNDIuaGEuaGsxLmhrLmxvYWRiYWxhbmNlLnNpbg==[\r][\n]"
+6444 DEBUG [2013-04-04 01:10:44]  << "[\r][\n]"
+6444 DEBUG [2013-04-04 01:10:44]  Receiving response: HTTP/1.1 200 OK
+6444 DEBUG [2013-04-04 01:10:44]  << HTTP/1.1 200 OK
+6444 DEBUG [2013-04-04 01:10:44]  << Server: nginx/1.1.17
+6444 DEBUG [2013-04-04 01:10:44]  << Date: Wed, 03 Apr 2013 17:10:44 GMT
+6444 DEBUG [2013-04-04 01:10:44]  << Content-Type: text/html
+6444 DEBUG [2013-04-04 01:10:44]  << Content-Length: 345
+6445 DEBUG [2013-04-04 01:10:44]  << Connection: keep-alive
+6445 DEBUG [2013-04-04 01:10:44]  << Set-Cookie: U_TRS1=00000043.ae744957.515c6294.4a498fc0; path=/; expires=Sat, 01-Apr-23 17:10:44 GMT; domain=.sina.com.cn
+6445 DEBUG [2013-04-04 01:10:44]  << Set-Cookie: U_TRS2=00000043.ae814957.515c6294.fdf9c5ba; path=/; domain=.sina.com.cn
+6445 DEBUG [2013-04-04 01:10:44]  << Pragma: no-cache
+6445 DEBUG [2013-04-04 01:10:44]  << P3P: CP="CURa ADMa DEVa PSAo PSDo OUR BUS UNI PUR INT DEM STA PRE COM NAV OTC NOI DSP COR"
+6445 DEBUG [2013-04-04 01:10:44]  << Cache-Control: no-cache
+6445 DEBUG [2013-04-04 01:10:44]  << Expires: Wed, 03 Apr 2013 17:12:44 GMT
+6445 DEBUG [2013-04-04 01:10:44]  << Vary: Accept-Encoding
+6445 DEBUG [2013-04-04 01:10:44]  << Content-Encoding: gzip
+6445 DEBUG [2013-04-04 01:10:44]  << DPOOL_HEADER: 10.81.11.68
+6445 DEBUG [2013-04-04 01:10:44]  << SINA-LB: aGsxNDIuaGEuaGsxLmhrLmxvYWRiYWxhbmNlLnNpbg==
+6469 DEBUG [2013-04-04 01:10:44]  Cookie accepted: "[version: 0][name: U_TRS1][value: 00000043.ae744957.515c6294.4a498fc0][domain: .sina.com.cn][path: /][expiry: Sun Apr 02 01:10:44 HKT 2023]". 
+6473 DEBUG [2013-04-04 01:10:44]  Cookie accepted: "[version: 0][name: U_TRS2][value: 00000043.ae814957.515c6294.fdf9c5ba][domain: .sina.com.cn][path: /][expiry: null]". 
+6473 DEBUG [2013-04-04 01:10:44]  Connection can be kept alive indefinitely
+6473 DEBUG [2013-04-04 01:10:44]  << "[0x1f][0x8b][0x8][0x0][0x0][0x0][0x0][0x0][0x0][0x3]%[0x90][0xcb]n[0xdc]0[0xc]E[0xff][0xc5][0xab][0x16][0x98][0x4][0x12]IIdv[0xa2][0x1e][0xe8][0xa2]A[0x81][0xa6][0x8b]n=[0xb6][0xd2][0xe][0xc6][0xb1][0x7][0x9e]i[0xd0]"[0xe8][0xbf]GE[0x97][0xbc] [0xce][0xbd]8[0xd7][0xd3]:>=}I[0xdb]z[0xdb][0xb7]ei[0xfb][0xfd]eo[0xcb][0xf6][0xe3][0xb4][0xa6]qYt[0x9c][0xce][0x1f][0xde][0x86][0xbd][0xdd][0xa6]mn[0xc3][0x83]9[0xc][0xd7][0xb6][0xbf][0xb6][0xfd]vz[0xe9][0xa7]E[0xef][0x8c][0x11]Ct[0x18].[0xd3]i[0x1e][0x1e][0x86][0x9f][0xe7];[0x9c][0x8d][0x6][0xe3][0xd8][0x92]c?[0xcd][0xde]x[0x19]GF:[0x1e][0xe7]f[0xfb];{[0x1a][0xe][0xc3][0xba][0xad]Sg[0xc][0xdf][0xbe]~[0xff][0xfc][0xe9][0xb1][0x7][0x97]_[0xc7]s[0xfb][0xd3][0x93][0xa2][0x10][0x91][0x9d]g[0xef]-s[0xa8][0xd1][0xb2][0xd1][0x9c][0xd5][0xa5][0xa8][0xd9]U[0xb0])h[0xcd]NRg%[0x85][0xc][0xe4]"[0x87][0x98][0xc0][0xa1][0xf1][0xc0][0xc][0x1][0x4][0x4][0x8b]s[0xc6][0xa3]3[0xce]p[0x9]UbD[0xd5][0x10]*!"[0xa0]%1U[0xac][0xab]>{L[0xce][0xd5][0x2][0xd5]p$QtX[0x89](f[0x14][0xc1][0x14]S2[0x90]50EU[0xe5]B[0x10]E[0xad]j[0xad]U[0x91][0xb5]X[0xce][0x81]Ko7[0x85][0xac][0x8a]r[\r][0x18][0x5][0xb8][0x14][0x93]R)[0xb6][0xfa][0x80][0xc2]L*![0x84]B[0xb5]Ha[0x8e][0x1d]PH[0x9c]@_M1Ho[0xb5]l[0xb3]'[0x2]"[0xec].[0xf6][0xeb]x~[0xed]*,[0xa2]!`[0xb0][0xff][0xc2][0xf6][0xbb]M[0xff][0xc5][0x9b][0xbf][0x1f][0xdf][0x1]s:[0xad]}[0xb9][0x1][0x0][0x0]"
+6473 DEBUG [2013-04-04 01:10:44]  Connection [id: 1][route: {s}->https://login.sina.com.cn] can be kept alive indefinitely
+6474 DEBUG [2013-04-04 01:10:44]  Connection released: [id: 1][route: {s}->https://login.sina.com.cn][total kept alive: 2; route allocated: 1 of 6; total allocated: 2 of 20]
+6474 WARN  [2013-04-04 01:10:44]  Expected content type of 'application/javascript' or 'application/ecmascript' for remotely loaded JavaScript element at 'https://login.sina.com.cn/sso/prelogin.php?entry=openapi&callback=sinaSSOController.preloginCallBack&su=d2VzbGV5aHlmdSU0MGdtYWlsLmNvbQ%3D%3D&rsakt=mod&client=ssologin.js(v1.4.5)&_=1365009043584', but got 'text/html'.
+6477 DEBUG [2013-04-04 01:10:44]  job added to queue
+6477 DEBUG [2013-04-04 01:10:44]      window is: TopLevelWindow[name=""]
+6477 DEBUG [2013-04-04 01:10:44]      added job: JavaScript Execution Job 3: window.setTimeout(
+  function () {
+      if (k.servertime) {
+          k.servertime += k.calcServerTimeInterval / 1000;
+          G.start(k.calcServerTimeInterval, b);
+      }
+  }
+, 2000)
+6477 DEBUG [2013-04-04 01:10:44]  after adding job to the queue, the queue is: 
+6477 DEBUG [2013-04-04 01:10:44]  ------ printing JavaScript job queue -----
+6477 DEBUG [2013-04-04 01:10:44]    number of jobs on the queue: 2
+6477 DEBUG [2013-04-04 01:10:44]    1)  Job target execution time: 1365009046606
+6477 DEBUG [2013-04-04 01:10:44]        job to string: JavaScript Execution Job 3: window.setTimeout(
+  function () {
+      if (k.servertime) {
+          k.servertime += k.calcServerTimeInterval / 1000;
+          G.start(k.calcServerTimeInterval, b);
+      }
+  }
+, 2000)
+6477 DEBUG [2013-04-04 01:10:44]        job id: 3
+6477 DEBUG [2013-04-04 01:10:44]    2)  Job target execution time: 1365009053419
+6477 DEBUG [2013-04-04 01:10:44]        job to string: JavaScript Execution Job 1: window.setTimeout(sinaSSOController.updateCookie(), 10000)
+6477 DEBUG [2013-04-04 01:10:44]        job id: 1
+6477 DEBUG [2013-04-04 01:10:44]  ------------------------------------------
+8897 DEBUG [2013-04-04 01:10:47]  Script node added: <script id="ssoLoginScript" type="text/javascript" src="https://login.sina.com.cn/sso/login.php?entry=openapi&amp;gateway=1&amp;from=&amp;savestate=0&amp;useticket=1&amp;pagerefer=&amp;ct=1800&amp;s=1&amp;vsnf=1&amp;vsnval=&amp;door=&amp;appkey=6dypCB&amp;su=d2VzbGV5aHlmdSU0MGdtYWlsLmNvbQ%3D%3D&amp;service=miniblog&amp;servertime=1365009044&amp;nonce=TRXLHM&amp;pwencode=rsa2&amp;rsakv=1330428213&amp;sp=a2124878529e0becb042b3089fd1fac40c397a21e0a2d8677992d13733b151fa29bb8c47e49fab1030749e6248d239c4a120b0266d8f9d3246456d00e1baaf2c3e2d6918f2651664ab7de43bc26b96bd689f412abb9cfe6056d24c92bd58e742c34a10aaf26fb5a2325e259c05dbce632754ff6bfd68437acc8cfeb6bc246b0e&amp;encoding=UTF-8&amp;callback=sinaSSOController.loginCallBack&amp;cdult=2&amp;domain=weibo.com&amp;prelt=1150&amp;returntype=TEXT&amp;client=ssologin.js(v1.4.5)&amp;_=1365009047025">
+</script>
+
+8897 DEBUG [2013-04-04 01:10:47]  Loading external JavaScript: https://login.sina.com.cn/sso/login.php?entry=openapi&gateway=1&from=&savestate=0&useticket=1&pagerefer=&ct=1800&s=1&vsnf=1&vsnval=&door=&appkey=6dypCB&su=d2VzbGV5aHlmdSU0MGdtYWlsLmNvbQ%3D%3D&service=miniblog&servertime=1365009044&nonce=TRXLHM&pwencode=rsa2&rsakv=1330428213&sp=a2124878529e0becb042b3089fd1fac40c397a21e0a2d8677992d13733b151fa29bb8c47e49fab1030749e6248d239c4a120b0266d8f9d3246456d00e1baaf2c3e2d6918f2651664ab7de43bc26b96bd689f412abb9cfe6056d24c92bd58e742c34a10aaf26fb5a2325e259c05dbce632754ff6bfd68437acc8cfeb6bc246b0e&encoding=UTF-8&callback=sinaSSOController.loginCallBack&cdult=2&domain=weibo.com&prelt=1150&returntype=TEXT&client=ssologin.js(v1.4.5)&_=1365009047025
+8898 DEBUG [2013-04-04 01:10:47]  Load response for GET https://login.sina.com.cn/sso/login.php?entry=openapi&gateway=1&from=&savestate=0&useticket=1&pagerefer=&ct=1800&s=1&vsnf=1&vsnval=&door=&appkey=6dypCB&su=d2VzbGV5aHlmdSU0MGdtYWlsLmNvbQ%3D%3D&service=miniblog&servertime=1365009044&nonce=TRXLHM&pwencode=rsa2&rsakv=1330428213&sp=a2124878529e0becb042b3089fd1fac40c397a21e0a2d8677992d13733b151fa29bb8c47e49fab1030749e6248d239c4a120b0266d8f9d3246456d00e1baaf2c3e2d6918f2651664ab7de43bc26b96bd689f412abb9cfe6056d24c92bd58e742c34a10aaf26fb5a2325e259c05dbce632754ff6bfd68437acc8cfeb6bc246b0e&encoding=UTF-8&callback=sinaSSOController.loginCallBack&cdult=2&domain=weibo.com&prelt=1150&returntype=TEXT&client=ssologin.js(v1.4.5)&_=1365009047025
+8901 DEBUG [2013-04-04 01:10:47]  Connection request: [route: {s}->https://login.sina.com.cn][total kept alive: 2; route allocated: 1 of 6; total allocated: 2 of 20]
+8901 DEBUG [2013-04-04 01:10:47]  Connection leased: [id: 1][route: {s}->https://login.sina.com.cn][total kept alive: 1; route allocated: 1 of 6; total allocated: 2 of 20]
+8902 DEBUG [2013-04-04 01:10:47]  Stale connection check
+8919 DEBUG [2013-04-04 01:10:47]  CookieSpec selected: mine
+8920 DEBUG [2013-04-04 01:10:47]  Cookie [version: 0][name: U_TRS2][value: 00000043.ae814957.515c6294.fdf9c5ba][domain: .sina.com.cn][path: /][expiry: null] match [(secure)login.sina.com.cn:443/sso/login.php]
+8920 DEBUG [2013-04-04 01:10:47]  Cookie [version: 0][name: U_TRS1][value: 00000043.ae744957.515c6294.4a498fc0][domain: .sina.com.cn][path: /][expiry: Sun Apr 02 01:10:44 HKT 2023] match [(secure)login.sina.com.cn:443/sso/login.php]
+8920 DEBUG [2013-04-04 01:10:47]  Auth cache not set in the context
+8920 DEBUG [2013-04-04 01:10:47]  Target auth state: UNCHALLENGED
+8920 DEBUG [2013-04-04 01:10:47]  Proxy auth state: UNCHALLENGED
+8920 DEBUG [2013-04-04 01:10:47]  Attempt 1 to execute request
+8921 DEBUG [2013-04-04 01:10:47]  Sending request: GET /sso/login.php?entry=openapi&gateway=1&from=&savestate=0&useticket=1&pagerefer=&ct=1800&s=1&vsnf=1&vsnval=&door=&appkey=6dypCB&su=d2VzbGV5aHlmdSU0MGdtYWlsLmNvbQ%3D%3D&service=miniblog&servertime=1365009044&nonce=TRXLHM&pwencode=rsa2&rsakv=1330428213&sp=a2124878529e0becb042b3089fd1fac40c397a21e0a2d8677992d13733b151fa29bb8c47e49fab1030749e6248d239c4a120b0266d8f9d3246456d00e1baaf2c3e2d6918f2651664ab7de43bc26b96bd689f412abb9cfe6056d24c92bd58e742c34a10aaf26fb5a2325e259c05dbce632754ff6bfd68437acc8cfeb6bc246b0e&encoding=UTF-8&callback=sinaSSOController.loginCallBack&cdult=2&domain=weibo.com&prelt=1150&returntype=TEXT&client=ssologin.js(v1.4.5)&_=1365009047025 HTTP/1.1
+8921 DEBUG [2013-04-04 01:10:47]  >> "GET /sso/login.php?entry=openapi&gateway=1&from=&savestate=0&useticket=1&pagerefer=&ct=1800&s=1&vsnf=1&vsnval=&door=&appkey=6dypCB&su=d2VzbGV5aHlmdSU0MGdtYWlsLmNvbQ%3D%3D&service=miniblog&servertime=1365009044&nonce=TRXLHM&pwencode=rsa2&rsakv=1330428213&sp=a2124878529e0becb042b3089fd1fac40c397a21e0a2d8677992d13733b151fa29bb8c47e49fab1030749e6248d239c4a120b0266d8f9d3246456d00e1baaf2c3e2d6918f2651664ab7de43bc26b96bd689f412abb9cfe6056d24c92bd58e742c34a10aaf26fb5a2325e259c05dbce632754ff6bfd68437acc8cfeb6bc246b0e&encoding=UTF-8&callback=sinaSSOController.loginCallBack&cdult=2&domain=weibo.com&prelt=1150&returntype=TEXT&client=ssologin.js(v1.4.5)&_=1365009047025 HTTP/1.1[\r][\n]"
+8922 DEBUG [2013-04-04 01:10:47]  >> "Host: login.sina.com.cn[\r][\n]"
+8922 DEBUG [2013-04-04 01:10:47]  >> "User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:17.0) Gecko/20100101 Firefox/17.0[\r][\n]"
+8922 DEBUG [2013-04-04 01:10:47]  >> "Accept-Language: en-us[\r][\n]"
+8923 DEBUG [2013-04-04 01:10:47]  >> "Referer: https://api.weibo.com/oauth2/authorize?client_id=3858201645&redirect_uri=http%3A%2F%2F143.89.20.216&response_type=code[\r][\n]"
+8923 DEBUG [2013-04-04 01:10:47]  >> "Accept-Encoding: gzip, deflate[\r][\n]"
+8923 DEBUG [2013-04-04 01:10:47]  >> "Accept: */*[\r][\n]"
+8923 DEBUG [2013-04-04 01:10:47]  >> "Connection: Keep-Alive[\r][\n]"
+8923 DEBUG [2013-04-04 01:10:47]  >> "Cookie: U_TRS2=00000043.ae814957.515c6294.fdf9c5ba; U_TRS1=00000043.ae744957.515c6294.4a498fc0[\r][\n]"
+8923 DEBUG [2013-04-04 01:10:47]  >> "[\r][\n]"
+8924 DEBUG [2013-04-04 01:10:47]  >> GET /sso/login.php?entry=openapi&gateway=1&from=&savestate=0&useticket=1&pagerefer=&ct=1800&s=1&vsnf=1&vsnval=&door=&appkey=6dypCB&su=d2VzbGV5aHlmdSU0MGdtYWlsLmNvbQ%3D%3D&service=miniblog&servertime=1365009044&nonce=TRXLHM&pwencode=rsa2&rsakv=1330428213&sp=a2124878529e0becb042b3089fd1fac40c397a21e0a2d8677992d13733b151fa29bb8c47e49fab1030749e6248d239c4a120b0266d8f9d3246456d00e1baaf2c3e2d6918f2651664ab7de43bc26b96bd689f412abb9cfe6056d24c92bd58e742c34a10aaf26fb5a2325e259c05dbce632754ff6bfd68437acc8cfeb6bc246b0e&encoding=UTF-8&callback=sinaSSOController.loginCallBack&cdult=2&domain=weibo.com&prelt=1150&returntype=TEXT&client=ssologin.js(v1.4.5)&_=1365009047025 HTTP/1.1
+8924 DEBUG [2013-04-04 01:10:47]  >> Host: login.sina.com.cn
+8924 DEBUG [2013-04-04 01:10:47]  >> User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:17.0) Gecko/20100101 Firefox/17.0
+8924 DEBUG [2013-04-04 01:10:47]  >> Accept-Language: en-us
+8924 DEBUG [2013-04-04 01:10:47]  >> Referer: https://api.weibo.com/oauth2/authorize?client_id=3858201645&redirect_uri=http%3A%2F%2F143.89.20.216&response_type=code
+8924 DEBUG [2013-04-04 01:10:47]  >> Accept-Encoding: gzip, deflate
+8924 DEBUG [2013-04-04 01:10:47]  >> Accept: */*
+8924 DEBUG [2013-04-04 01:10:47]  >> Connection: Keep-Alive
+8925 DEBUG [2013-04-04 01:10:47]  >> Cookie: U_TRS2=00000043.ae814957.515c6294.fdf9c5ba; U_TRS1=00000043.ae744957.515c6294.4a498fc0
+9034 DEBUG [2013-04-04 01:10:47]  << "HTTP/1.1 200 OK[\r][\n]"
+9035 DEBUG [2013-04-04 01:10:47]  << "Server: nginx/1.1.17[\r][\n]"
+9035 DEBUG [2013-04-04 01:10:47]  << "Date: Wed, 03 Apr 2013 17:10:47 GMT[\r][\n]"
+9035 DEBUG [2013-04-04 01:10:47]  << "Content-Type: text/html[\r][\n]"
+9035 DEBUG [2013-04-04 01:10:47]  << "Content-Length: 174[\r][\n]"
+9035 DEBUG [2013-04-04 01:10:47]  << "Connection: keep-alive[\r][\n]"
+9035 DEBUG [2013-04-04 01:10:47]  << "Pragma: no-cache[\r][\n]"
+9035 DEBUG [2013-04-04 01:10:47]  << "P3P: CP="CURa ADMa DEVa PSAo PSDo OUR BUS UNI PUR INT DEM STA PRE COM NAV OTC NOI DSP COR"[\r][\n]"
+9035 DEBUG [2013-04-04 01:10:47]  << "Set-Cookie: tgc=TGT-Mjc5MDE5MjY3NQ==-1365009047-hk-83F826420BDBD5DF903DD6E9206B4540; domain=login.sina.com.cn; path=/; Httponly[\r][\n]"
+9035 DEBUG [2013-04-04 01:10:47]  << "Set-Cookie: SUS=SID-2790192675-1365009047-GZ-04qui-3a8e383bd9444943af9fbaae71ca41db; path=/; domain=.sina.com.cn; httponly[\r][\n]"
+9036 DEBUG [2013-04-04 01:10:47]  << "Set-Cookie: SUE=es%3D3011bd638d990ac47222bc106e1fb7c3%26ev%3Dv1%26es2%3D021b3b431f3cf1d5269a7fd4089c5661%26rs0%3DnM%252BdG1NECB8T1Cnmf1mtqeBAYZM5E1A%252B8G4evsrHz2lzgFOKh4gYJbV%252FYihsBDvZ43W50UjvnkBOc15ha1%252F57QyqsEWoFZm5avn3EJhAt66Or4tRMufjXTIZeviH0LzpYhKAEEWY9UZB461Kw2NfHNkI9moocoaZyRkI68Ft7yM%253D%26rv%3D0;path=/;domain=.sina.com.cn;Httponly[\r][\n]"
+9036 DEBUG [2013-04-04 01:10:47]  << "Set-Cookie: SUP=cv%3D1%26bt%3D1365009047%26et%3D1365010847%26d%3D40c3%26i%3D41db%26us%3D1%26vf%3D0%26vt%3D0%26ac%3D2%26st%3D0%26lt%3D1%26uid%3D2790192675%26user%3Dwesleyhyfu%2540gmail.com%26ag%3D4%26name%3Dwesleyhyfu%2540gmail.com%26nick%3Dwesleyfu1991%26sex%3D1%26ps%3D0%26email%3D%26dob%3D%26ln%3Dwesleyhyfu%2540gmail.com%26os%3D%26fmp%3D%26lcp%3D;path=/;domain=.sina.com.cn[\r][\n]"
+9036 DEBUG [2013-04-04 01:10:47]  << "Set-Cookie: LT=1365009047; path=/; domain=login.sina.com.cn[\r][\n]"
+9036 DEBUG [2013-04-04 01:10:47]  << "Set-Cookie: sso_info=nick%3Dwesleyfu1991%26uid%3D2790192675; Expires=Thursday, 03-Apr-14 17:10:47 GMT; path=/; domain=.sina.com.cn[\r][\n]"
+9036 DEBUG [2013-04-04 01:10:47]  << "Cache-Control: no-cache[\r][\n]"
+9036 DEBUG [2013-04-04 01:10:47]  << "Expires: Wed, 03 Apr 2013 17:12:47 GMT[\r][\n]"
+9036 DEBUG [2013-04-04 01:10:47]  << "Vary: Accept-Encoding[\r][\n]"
+9036 DEBUG [2013-04-04 01:10:47]  << "Content-Encoding: gzip[\r][\n]"
+9036 DEBUG [2013-04-04 01:10:47]  << "DPOOL_HEADER: 10.81.11.67[\r][\n]"
+9037 DEBUG [2013-04-04 01:10:47]  << "SINA-LB: aGsxNDIuaGEuaGsxLmhrLmxvYWRiYWxhbmNlLnNpbg==[\r][\n]"
+9037 DEBUG [2013-04-04 01:10:47]  << "[\r][\n]"
+9037 DEBUG [2013-04-04 01:10:47]  Receiving response: HTTP/1.1 200 OK
+9037 DEBUG [2013-04-04 01:10:47]  << HTTP/1.1 200 OK
+9037 DEBUG [2013-04-04 01:10:47]  << Server: nginx/1.1.17
+9037 DEBUG [2013-04-04 01:10:47]  << Date: Wed, 03 Apr 2013 17:10:47 GMT
+9037 DEBUG [2013-04-04 01:10:47]  << Content-Type: text/html
+9037 DEBUG [2013-04-04 01:10:47]  << Content-Length: 174
+9037 DEBUG [2013-04-04 01:10:47]  << Connection: keep-alive
+9037 DEBUG [2013-04-04 01:10:47]  << Pragma: no-cache
+9037 DEBUG [2013-04-04 01:10:47]  << P3P: CP="CURa ADMa DEVa PSAo PSDo OUR BUS UNI PUR INT DEM STA PRE COM NAV OTC NOI DSP COR"
+9037 DEBUG [2013-04-04 01:10:47]  << Set-Cookie: tgc=TGT-Mjc5MDE5MjY3NQ==-1365009047-hk-83F826420BDBD5DF903DD6E9206B4540; domain=login.sina.com.cn; path=/; Httponly
+9037 DEBUG [2013-04-04 01:10:47]  << Set-Cookie: SUS=SID-2790192675-1365009047-GZ-04qui-3a8e383bd9444943af9fbaae71ca41db; path=/; domain=.sina.com.cn; httponly
+9037 DEBUG [2013-04-04 01:10:47]  << Set-Cookie: SUE=es%3D3011bd638d990ac47222bc106e1fb7c3%26ev%3Dv1%26es2%3D021b3b431f3cf1d5269a7fd4089c5661%26rs0%3DnM%252BdG1NECB8T1Cnmf1mtqeBAYZM5E1A%252B8G4evsrHz2lzgFOKh4gYJbV%252FYihsBDvZ43W50UjvnkBOc15ha1%252F57QyqsEWoFZm5avn3EJhAt66Or4tRMufjXTIZeviH0LzpYhKAEEWY9UZB461Kw2NfHNkI9moocoaZyRkI68Ft7yM%253D%26rv%3D0;path=/;domain=.sina.com.cn;Httponly
+9037 DEBUG [2013-04-04 01:10:47]  << Set-Cookie: SUP=cv%3D1%26bt%3D1365009047%26et%3D1365010847%26d%3D40c3%26i%3D41db%26us%3D1%26vf%3D0%26vt%3D0%26ac%3D2%26st%3D0%26lt%3D1%26uid%3D2790192675%26user%3Dwesleyhyfu%2540gmail.com%26ag%3D4%26name%3Dwesleyhyfu%2540gmail.com%26nick%3Dwesleyfu1991%26sex%3D1%26ps%3D0%26email%3D%26dob%3D%26ln%3Dwesleyhyfu%2540gmail.com%26os%3D%26fmp%3D%26lcp%3D;path=/;domain=.sina.com.cn
+9037 DEBUG [2013-04-04 01:10:47]  << Set-Cookie: LT=1365009047; path=/; domain=login.sina.com.cn
+9037 DEBUG [2013-04-04 01:10:47]  << Set-Cookie: sso_info=nick%3Dwesleyfu1991%26uid%3D2790192675; Expires=Thursday, 03-Apr-14 17:10:47 GMT; path=/; domain=.sina.com.cn
+9038 DEBUG [2013-04-04 01:10:47]  << Cache-Control: no-cache
+9038 DEBUG [2013-04-04 01:10:47]  << Expires: Wed, 03 Apr 2013 17:12:47 GMT
+9038 DEBUG [2013-04-04 01:10:47]  << Vary: Accept-Encoding
+9038 DEBUG [2013-04-04 01:10:47]  << Content-Encoding: gzip
+9038 DEBUG [2013-04-04 01:10:47]  << DPOOL_HEADER: 10.81.11.67
+9038 DEBUG [2013-04-04 01:10:47]  << SINA-LB: aGsxNDIuaGEuaGsxLmhrLmxvYWRiYWxhbmNlLnNpbg==
+9038 DEBUG [2013-04-04 01:10:47]  Cookie accepted: "[version: 0][name: tgc][value: TGT-Mjc5MDE5MjY3NQ==-1365009047-hk-83F826420BDBD5DF903DD6E9206B4540][domain: login.sina.com.cn][path: /][expiry: null]". 
+9038 DEBUG [2013-04-04 01:10:47]  Cookie accepted: "[version: 0][name: SUS][value: SID-2790192675-1365009047-GZ-04qui-3a8e383bd9444943af9fbaae71ca41db][domain: .sina.com.cn][path: /][expiry: null]". 
+9039 DEBUG [2013-04-04 01:10:47]  Cookie accepted: "[version: 0][name: SUE][value: es%3D3011bd638d990ac47222bc106e1fb7c3%26ev%3Dv1%26es2%3D021b3b431f3cf1d5269a7fd4089c5661%26rs0%3DnM%252BdG1NECB8T1Cnmf1mtqeBAYZM5E1A%252B8G4evsrHz2lzgFOKh4gYJbV%252FYihsBDvZ43W50UjvnkBOc15ha1%252F57QyqsEWoFZm5avn3EJhAt66Or4tRMufjXTIZeviH0LzpYhKAEEWY9UZB461Kw2NfHNkI9moocoaZyRkI68Ft7yM%253D%26rv%3D0][domain: .sina.com.cn][path: /][expiry: null]". 
+9039 DEBUG [2013-04-04 01:10:47]  Cookie accepted: "[version: 0][name: SUP][value: cv%3D1%26bt%3D1365009047%26et%3D1365010847%26d%3D40c3%26i%3D41db%26us%3D1%26vf%3D0%26vt%3D0%26ac%3D2%26st%3D0%26lt%3D1%26uid%3D2790192675%26user%3Dwesleyhyfu%2540gmail.com%26ag%3D4%26name%3Dwesleyhyfu%2540gmail.com%26nick%3Dwesleyfu1991%26sex%3D1%26ps%3D0%26email%3D%26dob%3D%26ln%3Dwesleyhyfu%2540gmail.com%26os%3D%26fmp%3D%26lcp%3D][domain: .sina.com.cn][path: /][expiry: null]". 
+9039 DEBUG [2013-04-04 01:10:47]  Cookie accepted: "[version: 0][name: LT][value: 1365009047][domain: login.sina.com.cn][path: /][expiry: null]". 
+9040 DEBUG [2013-04-04 01:10:47]  Cookie accepted: "[version: 0][name: sso_info][value: nick%3Dwesleyfu1991%26uid%3D2790192675][domain: .sina.com.cn][path: /][expiry: Fri Apr 04 01:10:47 HKT 2014]". 
+9040 DEBUG [2013-04-04 01:10:47]  Connection can be kept alive indefinitely
+9040 DEBUG [2013-04-04 01:10:47]  << "[0x1f][0x8b][0x8][0x0][0x0][0x0][0x0][0x0][0x0][0x3][\r][0x8d][0xc1][0xe][0x82] [0x0]@[0xff][0x85]Sm[0xd9]@E[0xa5][0xe6]A[0x4]OYk[0xd6][0xa1][0xb5][0xe][0xe]Y[0xa1][0x4][0x1b][0xd0][0xa9][0xf5][0xef]q|[0xef][0xf0][0x9e]Wf[0x1c][0x86]SkMpVk[0xe9][0xb6][0xda]>[0x95]iG[0xad][0xe9]([0x96][0xd5][0x17]8[0x19][0x84][0x9d]$[0xd8][0x1][0x8]6 ([0xb1][0xc8][0x10]a[0xb8]$[0xfd],p[0xcf]8[0xee][0xe7][v<[0xd7]u[0x82][0xb2][0x2]CH`^&[0xaf]%aM[0x8b]9[0xcd]3D[0x9][0xc1][0x94][0xd1][0xaa][0xcb]QCy[0xc1]Y[0x95]1[0xd6][0xe5][0xb1][0xf6]QSL[0xa5]%[0x81][0x88][0xa4]E[0x89][0xa3][0x12][0xce]z[0xcf][0xec]{T[0xe6][0xea][0xf4]A[0xf9]8[0xbb]?~[0xeb][0xfd][0x1f][0xee][0xb8][0xc5][0xe5][0xaa][0x0][0x0][0x0]"
+9040 DEBUG [2013-04-04 01:10:47]  Connection [id: 1][route: {s}->https://login.sina.com.cn] can be kept alive indefinitely
+9041 DEBUG [2013-04-04 01:10:47]  Connection released: [id: 1][route: {s}->https://login.sina.com.cn][total kept alive: 2; route allocated: 1 of 6; total allocated: 2 of 20]
+9041 WARN  [2013-04-04 01:10:47]  Expected content type of 'application/javascript' or 'application/ecmascript' for remotely loaded JavaScript element at 'https://login.sina.com.cn/sso/login.php?entry=openapi&gateway=1&from=&savestate=0&useticket=1&pagerefer=&ct=1800&s=1&vsnf=1&vsnval=&door=&appkey=6dypCB&su=d2VzbGV5aHlmdSU0MGdtYWlsLmNvbQ%3D%3D&service=miniblog&servertime=1365009044&nonce=TRXLHM&pwencode=rsa2&rsakv=1330428213&sp=a2124878529e0becb042b3089fd1fac40c397a21e0a2d8677992d13733b151fa29bb8c47e49fab1030749e6248d239c4a120b0266d8f9d3246456d00e1baaf2c3e2d6918f2651664ab7de43bc26b96bd689f412abb9cfe6056d24c92bd58e742c34a10aaf26fb5a2325e259c05dbce632754ff6bfd68437acc8cfeb6bc246b0e&encoding=UTF-8&callback=sinaSSOController.loginCallBack&cdult=2&domain=weibo.com&prelt=1150&returntype=TEXT&client=ssologin.js(v1.4.5)&_=1365009047025', but got 'text/html'.
+9045 DEBUG [2013-04-04 01:10:47]  Load response for POST https://api.weibo.com/oauth2/authorize
+9053 DEBUG [2013-04-04 01:10:47]  Connection request: [route: {s}->https://api.weibo.com][total kept alive: 2; route allocated: 1 of 6; total allocated: 2 of 20]
+9053 DEBUG [2013-04-04 01:10:47]  Connection leased: [id: 0][route: {s}->https://api.weibo.com][total kept alive: 1; route allocated: 1 of 6; total allocated: 2 of 20]
+9053 DEBUG [2013-04-04 01:10:47]  Stale connection check
+9058 DEBUG [2013-04-04 01:10:47]  CookieSpec selected: mine
+9059 DEBUG [2013-04-04 01:10:47]  Auth cache not set in the context
+9059 DEBUG [2013-04-04 01:10:47]  Target auth state: UNCHALLENGED
+9059 DEBUG [2013-04-04 01:10:47]  Proxy auth state: UNCHALLENGED
+9059 DEBUG [2013-04-04 01:10:47]  Attempt 1 to execute request
+9059 DEBUG [2013-04-04 01:10:47]  Sending request: POST /oauth2/authorize HTTP/1.1
+9059 DEBUG [2013-04-04 01:10:47]  >> "POST /oauth2/authorize HTTP/1.1[\r][\n]"
+9059 DEBUG [2013-04-04 01:10:47]  >> "Host: api.weibo.com[\r][\n]"
+9059 DEBUG [2013-04-04 01:10:47]  >> "User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:17.0) Gecko/20100101 Firefox/17.0[\r][\n]"
+9060 DEBUG [2013-04-04 01:10:47]  >> "Accept-Language: en-us[\r][\n]"
+9060 DEBUG [2013-04-04 01:10:47]  >> "Referer: https://api.weibo.com/oauth2/authorize?client_id=3858201645&redirect_uri=http%3A%2F%2F143.89.20.216&response_type=code[\r][\n]"
+9060 DEBUG [2013-04-04 01:10:47]  >> "Accept-Encoding: gzip, deflate[\r][\n]"
+9060 DEBUG [2013-04-04 01:10:47]  >> "Accept: */*[\r][\n]"
+9060 DEBUG [2013-04-04 01:10:47]  >> "Content-Length: 574[\r][\n]"
+9060 DEBUG [2013-04-04 01:10:47]  >> "Content-Type: application/x-www-form-urlencoded[\r][\n]"
+9060 DEBUG [2013-04-04 01:10:47]  >> "Connection: Keep-Alive[\r][\n]"
+9060 DEBUG [2013-04-04 01:10:47]  >> "[\r][\n]"
+9060 DEBUG [2013-04-04 01:10:47]  >> POST /oauth2/authorize HTTP/1.1
+9060 DEBUG [2013-04-04 01:10:47]  >> Host: api.weibo.com
+9060 DEBUG [2013-04-04 01:10:47]  >> User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:17.0) Gecko/20100101 Firefox/17.0
+9060 DEBUG [2013-04-04 01:10:47]  >> Accept-Language: en-us
+9061 DEBUG [2013-04-04 01:10:47]  >> Referer: https://api.weibo.com/oauth2/authorize?client_id=3858201645&redirect_uri=http%3A%2F%2F143.89.20.216&response_type=code
+9061 DEBUG [2013-04-04 01:10:47]  >> Accept-Encoding: gzip, deflate
+9061 DEBUG [2013-04-04 01:10:47]  >> Accept: */*
+9061 DEBUG [2013-04-04 01:10:47]  >> Content-Length: 574
+9061 DEBUG [2013-04-04 01:10:47]  >> Content-Type: application/x-www-form-urlencoded
+9061 DEBUG [2013-04-04 01:10:47]  >> Connection: Keep-Alive
+9062 DEBUG [2013-04-04 01:10:47]  >> "action=login&display=default&withOfficalFlag=0&withOfficalAccount=&scope=&ticket=ST-Mjc5MDE5MjY3NQ%3D%3D-1365009047-hk-DAC5EB431B995BDB8F41ABE6ED83DDF4&isLoginSina=&response_type=code&regCallback=https%253A%252F%252Fapi.weibo.com%252F2%252Foauth2%252Fauthorize%253Fclient_id%253D3858201645%2526response_type%253Dcode%2526display%253Ddefault%2526redirect_uri%253Dhttp%253A%252F%252F143.89.20.216%2526from%253D%2526with_cookie%253D&redirect_uri=http%3A%2F%2F143.89.20.216&client_id=3858201645&appkey62=6dypCB&state=&verifyToken=null&from=&userId=wesleyhyfu%40gmail.com&passwd="
+9310 DEBUG [2013-04-04 01:10:47]  << "HTTP/1.1 302 Moved Temporarily[\r][\n]"
+9311 DEBUG [2013-04-04 01:10:47]  << "Server: nginx/1.1.17[\r][\n]"
+9311 DEBUG [2013-04-04 01:10:47]  << "Date: Wed, 03 Apr 2013 17:10:47 GMT[\r][\n]"
+9311 DEBUG [2013-04-04 01:10:47]  << "Content-Length: 0[\r][\n]"
+9311 DEBUG [2013-04-04 01:10:47]  << "Connection: keep-alive[\r][\n]"
+9311 DEBUG [2013-04-04 01:10:47]  << "Pragma: No-cache[\r][\n]"
+9312 DEBUG [2013-04-04 01:10:47]  << "Cache-Control: no-cache[\r][\n]"
+9312 DEBUG [2013-04-04 01:10:47]  << "Expires: Thu, 01 Jan 1970 00:00:00 GMT[\r][\n]"
+9312 DEBUG [2013-04-04 01:10:47]  << "Api-Server-IP: 10.75.2.82[\r][\n]"
+9312 DEBUG [2013-04-04 01:10:47]  << "Set-Cookie: SUE=es%3D3011bd638d990ac47222bc106e1fb7c3%26ev%3Dv1%26es2%3Ddb47e7a32ace85719e20acd03dc94225%26rs0%3DSshFl3Kav7C4%252BoopvsUKHAA%252Fv1jR6yP%252FWqLbnxz1xgtBMUVMg8yfA9ZM5bNXbhMJqUvKBptdxhW6rTOJC%252FeKq21O4Xu3QSOtHI7XBWMP7EFdiP7vl2eb99%252Bekr7KQI1Bi0UwHS0GcqMa8EoMBsT1hxkw9d8wkrq75aSHB3bpk44%253D%26rv%3D0;path=/;domain=.weibo.com;Httponly[\r][\n]"
+9312 DEBUG [2013-04-04 01:10:47]  << "Set-Cookie: SUP=cv%3D1%26bt%3D1365009047%26et%3D1365010847%26d%3Dc909%26i%3D8cea%26us%3D1%26vf%3D0%26vt%3D0%26ac%3D2%26st%3D0%26uid%3D2790192675%26user%3Dwesleyhyfu%2540gmail.com%26ag%3D4%26name%3Dwesleyhyfu%2540gmail.com%26nick%3Dwesleyfu1991%26fmp%3D%26lcp%3D;path=/;domain=.weibo.com[\r][\n]"
+9312 DEBUG [2013-04-04 01:10:47]  << "Set-Cookie: SUS=SID-2790192675-1365009047-XD-7z1mf-45a50e9ec104f60604955ef348e741db; path=/; domain=.weibo.com; httponly[\r][\n]"
+9315 DEBUG [2013-04-04 01:10:47]  << "Location: http://143.89.20.216?code=dd8250c36a4c4d8c930e3fcad4817098[\r][\n]"
+9315 DEBUG [2013-04-04 01:10:47]  << "X-Varnish: 764864775[\r][\n]"
+9316 DEBUG [2013-04-04 01:10:47]  << "Age: 0[\r][\n]"
+9316 DEBUG [2013-04-04 01:10:47]  << "Via: 1.1 varnish[\r][\n]"
+9317 DEBUG [2013-04-04 01:10:47]  << "SINA-LB: aGsxNDIuaGEuaGsxLmhrLmxvYWRiYWxhbmNlLnNpbg==[\r][\n]"
+9317 DEBUG [2013-04-04 01:10:47]  << "[\r][\n]"
+9317 DEBUG [2013-04-04 01:10:47]  Receiving response: HTTP/1.1 302 Moved Temporarily
+9317 DEBUG [2013-04-04 01:10:47]  << HTTP/1.1 302 Moved Temporarily
+9317 DEBUG [2013-04-04 01:10:47]  << Server: nginx/1.1.17
+9317 DEBUG [2013-04-04 01:10:47]  << Date: Wed, 03 Apr 2013 17:10:47 GMT
+9317 DEBUG [2013-04-04 01:10:47]  << Content-Length: 0
+9317 DEBUG [2013-04-04 01:10:47]  << Connection: keep-alive
+9318 DEBUG [2013-04-04 01:10:47]  << Pragma: No-cache
+9318 DEBUG [2013-04-04 01:10:47]  << Cache-Control: no-cache
+9318 DEBUG [2013-04-04 01:10:47]  << Expires: Thu, 01 Jan 1970 00:00:00 GMT
+9318 DEBUG [2013-04-04 01:10:47]  << Api-Server-IP: 10.75.2.82
+9318 DEBUG [2013-04-04 01:10:47]  << Set-Cookie: SUE=es%3D3011bd638d990ac47222bc106e1fb7c3%26ev%3Dv1%26es2%3Ddb47e7a32ace85719e20acd03dc94225%26rs0%3DSshFl3Kav7C4%252BoopvsUKHAA%252Fv1jR6yP%252FWqLbnxz1xgtBMUVMg8yfA9ZM5bNXbhMJqUvKBptdxhW6rTOJC%252FeKq21O4Xu3QSOtHI7XBWMP7EFdiP7vl2eb99%252Bekr7KQI1Bi0UwHS0GcqMa8EoMBsT1hxkw9d8wkrq75aSHB3bpk44%253D%26rv%3D0;path=/;domain=.weibo.com;Httponly
+9325 DEBUG [2013-04-04 01:10:47]  << Set-Cookie: SUP=cv%3D1%26bt%3D1365009047%26et%3D1365010847%26d%3Dc909%26i%3D8cea%26us%3D1%26vf%3D0%26vt%3D0%26ac%3D2%26st%3D0%26uid%3D2790192675%26user%3Dwesleyhyfu%2540gmail.com%26ag%3D4%26name%3Dwesleyhyfu%2540gmail.com%26nick%3Dwesleyfu1991%26fmp%3D%26lcp%3D;path=/;domain=.weibo.com
+9325 DEBUG [2013-04-04 01:10:47]  << Set-Cookie: SUS=SID-2790192675-1365009047-XD-7z1mf-45a50e9ec104f60604955ef348e741db; path=/; domain=.weibo.com; httponly
+9325 DEBUG [2013-04-04 01:10:47]  << Location: http://143.89.20.216?code=dd8250c36a4c4d8c930e3fcad4817098
+9325 DEBUG [2013-04-04 01:10:47]  << X-Varnish: 764864775
+9325 DEBUG [2013-04-04 01:10:47]  << Age: 0
+9325 DEBUG [2013-04-04 01:10:47]  << Via: 1.1 varnish
+9325 DEBUG [2013-04-04 01:10:47]  << SINA-LB: aGsxNDIuaGEuaGsxLmhrLmxvYWRiYWxhbmNlLnNpbg==
+9328 DEBUG [2013-04-04 01:10:47]  Cookie accepted: "[version: 0][name: SUE][value: es%3D3011bd638d990ac47222bc106e1fb7c3%26ev%3Dv1%26es2%3Ddb47e7a32ace85719e20acd03dc94225%26rs0%3DSshFl3Kav7C4%252BoopvsUKHAA%252Fv1jR6yP%252FWqLbnxz1xgtBMUVMg8yfA9ZM5bNXbhMJqUvKBptdxhW6rTOJC%252FeKq21O4Xu3QSOtHI7XBWMP7EFdiP7vl2eb99%252Bekr7KQI1Bi0UwHS0GcqMa8EoMBsT1hxkw9d8wkrq75aSHB3bpk44%253D%26rv%3D0][domain: .weibo.com][path: /][expiry: null]". 
+9329 DEBUG [2013-04-04 01:10:47]  Cookie accepted: "[version: 0][name: SUP][value: cv%3D1%26bt%3D1365009047%26et%3D1365010847%26d%3Dc909%26i%3D8cea%26us%3D1%26vf%3D0%26vt%3D0%26ac%3D2%26st%3D0%26uid%3D2790192675%26user%3Dwesleyhyfu%2540gmail.com%26ag%3D4%26name%3Dwesleyhyfu%2540gmail.com%26nick%3Dwesleyfu1991%26fmp%3D%26lcp%3D][domain: .weibo.com][path: /][expiry: null]". 
+9329 DEBUG [2013-04-04 01:10:47]  Cookie accepted: "[version: 0][name: SUS][value: SID-2790192675-1365009047-XD-7z1mf-45a50e9ec104f60604955ef348e741db][domain: .weibo.com][path: /][expiry: null]". 
+9331 DEBUG [2013-04-04 01:10:47]  Connection can be kept alive indefinitely
+9332 DEBUG [2013-04-04 01:10:47]  Connection [id: 0][route: {s}->https://api.weibo.com] can be kept alive indefinitely
+9332 DEBUG [2013-04-04 01:10:47]  Connection released: [id: 0][route: {s}->https://api.weibo.com][total kept alive: 2; route allocated: 1 of 6; total allocated: 2 of 20]
+9333 DEBUG [2013-04-04 01:10:47]  Got a redirect status code [302] new location = [http://143.89.20.216?code=dd8250c36a4c4d8c930e3fcad4817098]
+9333 DEBUG [2013-04-04 01:10:47]  Load response for GET http://143.89.20.216/?code=dd8250c36a4c4d8c930e3fcad4817098
+9334 DEBUG [2013-04-04 01:10:47]  Connection request: [route: {}->http://143.89.20.216][total kept alive: 2; route allocated: 0 of 6; total allocated: 2 of 20]
+9334 DEBUG [2013-04-04 01:10:47]  Connection leased: [id: 2][route: {}->http://143.89.20.216][total kept alive: 2; route allocated: 1 of 6; total allocated: 3 of 20]
+9335 DEBUG [2013-04-04 01:10:47]  Connecting to 143.89.20.216:80
+9351 DEBUG [2013-04-04 01:10:47]  CookieSpec selected: mine
+9358 DEBUG [2013-04-04 01:10:47]  Auth cache not set in the context
+9365 DEBUG [2013-04-04 01:10:47]  Target auth state: UNCHALLENGED
+9365 DEBUG [2013-04-04 01:10:47]  Proxy auth state: UNCHALLENGED
+9365 DEBUG [2013-04-04 01:10:47]  Attempt 1 to execute request
+9365 DEBUG [2013-04-04 01:10:47]  Sending request: GET /?code=dd8250c36a4c4d8c930e3fcad4817098 HTTP/1.1
+9365 DEBUG [2013-04-04 01:10:47]  >> "GET /?code=dd8250c36a4c4d8c930e3fcad4817098 HTTP/1.1[\r][\n]"
+9365 DEBUG [2013-04-04 01:10:47]  >> "Host: 143.89.20.216[\r][\n]"
+9366 DEBUG [2013-04-04 01:10:47]  >> "User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:17.0) Gecko/20100101 Firefox/17.0[\r][\n]"
+9366 DEBUG [2013-04-04 01:10:47]  >> "Accept-Language: en-us[\r][\n]"
+9367 DEBUG [2013-04-04 01:10:47]  >> "Referer: https://api.weibo.com/oauth2/authorize?client_id=3858201645&redirect_uri=http%3A%2F%2F143.89.20.216&response_type=code[\r][\n]"
+9367 DEBUG [2013-04-04 01:10:47]  >> "Accept-Encoding: gzip, deflate[\r][\n]"
+9367 DEBUG [2013-04-04 01:10:47]  >> "Accept: */*[\r][\n]"
+9367 DEBUG [2013-04-04 01:10:47]  >> "Connection: Keep-Alive[\r][\n]"
+9367 DEBUG [2013-04-04 01:10:47]  >> "[\r][\n]"
+9367 DEBUG [2013-04-04 01:10:47]  >> GET /?code=dd8250c36a4c4d8c930e3fcad4817098 HTTP/1.1
+9367 DEBUG [2013-04-04 01:10:47]  >> Host: 143.89.20.216
+9367 DEBUG [2013-04-04 01:10:47]  >> User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:17.0) Gecko/20100101 Firefox/17.0
+9368 DEBUG [2013-04-04 01:10:47]  >> Accept-Language: en-us
+9368 DEBUG [2013-04-04 01:10:47]  >> Referer: https://api.weibo.com/oauth2/authorize?client_id=3858201645&redirect_uri=http%3A%2F%2F143.89.20.216&response_type=code
+9368 DEBUG [2013-04-04 01:10:47]  >> Accept-Encoding: gzip, deflate
+9368 DEBUG [2013-04-04 01:10:47]  >> Accept: */*
+9368 DEBUG [2013-04-04 01:10:47]  >> Connection: Keep-Alive
+9381 DEBUG [2013-04-04 01:10:47]  << "HTTP/1.1 200 OK[\r][\n]"
+9381 DEBUG [2013-04-04 01:10:47]  << "Date: Wed, 03 Apr 2013 17:10:44 GMT[\r][\n]"
+9381 DEBUG [2013-04-04 01:10:47]  << "Server: Apache/2.4.3 (Win32) PHP/5.4.10[\r][\n]"
+9381 DEBUG [2013-04-04 01:10:47]  << "Content-Length: 889[\r][\n]"
+9381 DEBUG [2013-04-04 01:10:47]  << "Keep-Alive: timeout=5, max=100[\r][\n]"
+9382 DEBUG [2013-04-04 01:10:47]  << "Connection: Keep-Alive[\r][\n]"
+9382 DEBUG [2013-04-04 01:10:47]  << "Content-Type: text/html;charset=UTF-8[\r][\n]"
+9382 DEBUG [2013-04-04 01:10:47]  << "[\r][\n]"
+9383 DEBUG [2013-04-04 01:10:47]  Receiving response: HTTP/1.1 200 OK
+9383 DEBUG [2013-04-04 01:10:47]  << HTTP/1.1 200 OK
+9383 DEBUG [2013-04-04 01:10:47]  << Date: Wed, 03 Apr 2013 17:10:44 GMT
+9383 DEBUG [2013-04-04 01:10:47]  << Server: Apache/2.4.3 (Win32) PHP/5.4.10
+9384 DEBUG [2013-04-04 01:10:47]  << Content-Length: 889
+9384 DEBUG [2013-04-04 01:10:47]  << Keep-Alive: timeout=5, max=100
+9384 DEBUG [2013-04-04 01:10:47]  << Connection: Keep-Alive
+9384 DEBUG [2013-04-04 01:10:47]  << Content-Type: text/html;charset=UTF-8
+9385 DEBUG [2013-04-04 01:10:47]  Connection can be kept alive for 5000 MILLISECONDS
+9385 DEBUG [2013-04-04 01:10:47]  << "<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">[\n]"
+9385 DEBUG [2013-04-04 01:10:47]  << "<html>[\n]"
+9385 DEBUG [2013-04-04 01:10:47]  << " <head>[\n]"
+9385 DEBUG [2013-04-04 01:10:47]  << "  <title>Index of /</title>[\n]"
+9385 DEBUG [2013-04-04 01:10:47]  << " </head>[\n]"
+9385 DEBUG [2013-04-04 01:10:47]  << " <body>[\n]"
+9386 DEBUG [2013-04-04 01:10:47]  << "<h1>Index of /</h1>[\n]"
+9386 DEBUG [2013-04-04 01:10:47]  << "<ul><li><a href="IELM550.aspx/"> IELM550.aspx/</a></li>[\n]"
+9386 DEBUG [2013-04-04 01:10:47]  << "<li><a href="IELM550/"> IELM550/</a></li>[\n]"
+9386 DEBUG [2013-04-04 01:10:47]  << "<li><a href="WarCraft.zip"> WarCraft.zip</a></li>[\n]"
+9386 DEBUG [2013-04-04 01:10:47]  << "<li><a href="ciedhc/"> ciedhc/</a></li>[\n]"
+9386 DEBUG [2013-04-04 01:10:47]  << "<li><a href="fck_hk_stock.php"> fck_hk_stock.php</a></li>[\n]"
+9386 DEBUG [2013-04-04 01:10:47]  << "<li><a href="hello_mysql.php"> hello_mysql.php</a></li>[\n]"
+9386 DEBUG [2013-04-04 01:10:47]  << "<li><a href="hello_php.php"> hello_php.php</a></li>[\n]"
+9386 DEBUG [2013-04-04 01:10:47]  << "<li><a href="index_pages/"> index_pages/</a></li>[\n]"
+9386 DEBUG [2013-04-04 01:10:47]  << "<li><a href="my_daily_log_viewer.php"> my_daily_log_viewer.php</a></li>[\n]"
+9387 DEBUG [2013-04-04 01:10:47]  << "<li><a href="pomshk/"> pomshk/</a></li>[\n]"
+9387 DEBUG [2013-04-04 01:10:47]  << "<li><a href="sandbox.php"> sandbox.php</a></li>[\n]"
+9387 DEBUG [2013-04-04 01:10:47]  << "<li><a href="time-management.html"> time-management.html</a></li>[\n]"
+9387 DEBUG [2013-04-04 01:10:47]  << "<li><a href="time-management.md"> time-management.md</a></li>[\n]"
+9387 DEBUG [2013-04-04 01:10:47]  << "<li><a href="www.iml"> www.iml</a></li>[\n]"
+9387 DEBUG [2013-04-04 01:10:47]  << "</ul>[\n]"
+9387 DEBUG [2013-04-04 01:10:47]  << "</body></html>[\n]"
+9387 DEBUG [2013-04-04 01:10:47]  Connection [id: 2][route: {}->http://143.89.20.216] can be kept alive for 5000 MILLISECONDS
+9387 DEBUG [2013-04-04 01:10:47]  Connection released: [id: 2][route: {}->http://143.89.20.216][total kept alive: 3; route allocated: 1 of 6; total allocated: 3 of 20]
+9389 DEBUG [2013-04-04 01:10:47]  Firing Event unload (Current Target: HTMLElement for HtmlHtml[<html xmlns="http://www.w3.org/1999/xhtml">]);
+9390 DEBUG [2013-04-04 01:10:47]  setEnclosedPage: HtmlPage(http://143.89.20.216/?code=dd8250c36a4c4d8c930e3fcad4817098)@1425388260
+9390 DEBUG [2013-04-04 01:10:47]  destroyChildren
+9427 DEBUG [2013-04-04 01:10:47]  Encoding found in HTTP headers: 'UTF-8'.
+9434 DEBUG [2013-04-04 01:10:47]  Firing Event DOMContentLoaded (Current Target: HTMLElement for HtmlHtml[<html>]);
+9436 DEBUG [2013-04-04 01:10:47]  Firing Event load (Current Target: HTMLElement for HtmlHtml[<html>]);
+9437 DEBUG [2013-04-04 01:10:47]  Finished executing JavaScript Execution Job 2: window.setTimeout(
+  function () {
+      sinaSSOController.customLoginCallBack = s.callback;
+      sinaSSOController.loginExtraQuery.ct = 1800;
+      sinaSSOController.crossDomain = false;
+      sinaSSOController.loginExtraQuery.s = 1;
+      sinaSSOController.loginExtraQuery.vsnf = 1;
+      sinaSSOController.loginExtraQuery.vsnval = s.vsnval;
+      sinaSSOController.loginExtraQuery.door = s.door;
+      sinaSSOController.loginExtraQuery.appkey = s.appkey;
+      sinaSSOController.login(u, t, s.remTime);
+  }
+, 1).
+9445 DEBUG [2013-04-04 01:10:47]  Finished job JavaScript Execution Job 2: window.setTimeout(
+  function () {
+      sinaSSOController.customLoginCallBack = s.callback;
+      sinaSSOController.loginExtraQuery.ct = 1800;
+      sinaSSOController.crossDomain = false;
+      sinaSSOController.loginExtraQuery.s = 1;
+      sinaSSOController.loginExtraQuery.vsnf = 1;
+      sinaSSOController.loginExtraQuery.vsnval = s.vsnval;
+      sinaSSOController.loginExtraQuery.door = s.door;
+      sinaSSOController.loginExtraQuery.appkey = s.appkey;
+      sinaSSOController.login(u, t, s.remTime);
+  }
+, 1)
+9445 DEBUG [2013-04-04 01:10:47]  stopped executing job at 1365009047574
+9445 DEBUG [2013-04-04 01:10:47]  Firing Event beforeunload (Current Target: HTMLElement for HtmlHtml[<html>]);
+9447 DEBUG [2013-04-04 01:10:47]  Firing Event unload (Current Target: HTMLElement for HtmlHtml[<html>]);
+9448 DEBUG [2013-04-04 01:10:47]  destroyChildren
+9448 DEBUG [2013-04-04 01:10:47]  Connection manager is shutting down
+9450 DEBUG [2013-04-04 01:10:47]  Connection 0.0.0.0:50515<->143.89.20.216:80 closed
+9451 DEBUG [2013-04-04 01:10:47]  Connection 0.0.0.0:50513<->114.134.80.166:443 closed
+9451 DEBUG [2013-04-04 01:10:47]  Connection 0.0.0.0:50514<->203.90.242.124:443 closed
+9451 DEBUG [2013-04-04 01:10:47]  Connection 0.0.0.0:50513<->114.134.80.166:443 closed
+9451 DEBUG [2013-04-04 01:10:47]  Connection 0.0.0.0:50515<->143.89.20.216:80 closed
+9451 DEBUG [2013-04-04 01:10:47]  Connection 0.0.0.0:50514<->203.90.242.124:443 closed
+9451 DEBUG [2013-04-04 01:10:47]  Connection manager shut down
