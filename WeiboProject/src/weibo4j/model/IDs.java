@@ -129,7 +129,7 @@ public class IDs extends WeiboResponse {
     @Override
     public String toString() {
         return "IDs{" +
-                "ids=" + ids +
+                "ids=" + Arrays.toString(ids) +
                 ", previousCursor=" + previousCursor +
                 ", nextCursor=" + nextCursor +
                 '}';
