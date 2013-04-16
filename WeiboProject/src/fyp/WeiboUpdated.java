@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.net.UnknownHostException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -36,6 +37,7 @@ import jxl.write.Number;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -153,13 +155,14 @@ public class WeiboUpdated {
 		nameListPath = getRes(NAME_LIST_FILE_NAME);
 		keywordListPath = getRes(KEYWORD_LIST_FILE_NAME);
 		keywordStat = new HashMap<String, Long>();
-		readKeywordStat(true);
+		
 		keywordList = readKeywords(new File(keywordListPath), 0,
 				KEYWORK_FILE_HAS_HEADER);
 		screenNameList = readScreenNames(new File(nameListPath), 0,
 				SCREEN_NAME_COL_IDX, NAME_LIST_FILE_HAS_HEADER);
 		initAccounts();
 		loadProperties();
+		readKeywordStat(true);
 		// Fast-forward to the current account
 		while (iAccounts.hasNext() && !currentAccount.isEmpty()) {
 			String account = iAccounts.next();
@@ -170,6 +173,8 @@ public class WeiboUpdated {
 	}
 
 	private static void readKeywordStat(boolean hasHeader) {
+		if(!LOAD_PREVIOUS_RESULT)
+			return ;
 		Workbook wb = null;
 		Sheet sheet = null;
 		try {
@@ -385,6 +390,9 @@ public class WeiboUpdated {
 						new Paging(currentPageNum, MAX_STATUS_CNT), ALL_DATA,
 						FEATURE_TYPE);
 			} catch (WeiboException e) {
+				if (e.getMessage().equals("api.weibo.com")){
+					log.error(String.format("Weibo API server (%s) may be down OR unreachable", e.getMessage()), e);
+				}
 				// Out of limit for this account
 				if (e.getErrorCode() == 10023) {
 					// Change Token
@@ -395,7 +403,7 @@ public class WeiboUpdated {
 							e.getError(), currentAccount);
 					log.error(msg, e);
 				}
-			}
+			} 
 		}
 		return statusWapper;
 	}
@@ -611,10 +619,13 @@ public class WeiboUpdated {
 		userIdInput.sendKeys(email, Keys.TAB);
 		passwdInput.sendKeys(password);
 		passwdInput.submit();
-
-		if (vcodeSectoin.getAttribute("style").isEmpty()) {
-			WebDriverWait waiter = new WebDriverWait(driver, TIME_OUT_SECONDS, WAIT_FOR_INPUT_MILLIS);
-			waiter.until(ExpectedConditions.titleIs(PAGE_TITLE));
+		try{
+			if (vcodeSectoin.getAttribute("style").isEmpty()) {
+				WebDriverWait waiter = new WebDriverWait(driver, TIME_OUT_SECONDS, WAIT_FOR_INPUT_MILLIS);
+				waiter.until(ExpectedConditions.titleIs(PAGE_TITLE));
+			}
+		}catch(StaleElementReferenceException e){
+			log.error(String.format("Can Auto-login, since [%s]", e.getMessage()), e);
 		}
 
 		String urlStr = driver.getCurrentUrl();
