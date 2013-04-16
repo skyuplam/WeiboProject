@@ -99,13 +99,13 @@ public class WeiboUpdated {
 	// The URL used to redirect
 	private static final String CALL_BACK_URL = "http://143.89.20.216";
 	// Used for slow down the process
-	private static final long PAUSE_PERIOD = 60000; // Wait 60 seconds
+	private static final long PAUSE_PERIOD = 30000; // Wait 30 seconds
 	private static final long PAUSE_PERIOD_PER_REQUEST = 2000; // Wait 2 seconds
 																// before each
 																// request
 	// Start from last result if true. 
 	// Set to True ONLY if the process is not finished last time.
-	private static final boolean LOAD_PREVIOUS_RESULT = false;
+	private static final boolean LOAD_PREVIOUS_RESULT = true;
 	// Timeout for getting user input for the CAPTCHA
 	private static final long TIME_OUT_SECONDS = 90;
 	// Time to get inpii
@@ -113,7 +113,8 @@ public class WeiboUpdated {
 	
 	private static final int ACCESS_CODE_LENGTH = 32;
 	// The page title of the redirected website. This will be used to stop the
-	// waiting of CHATCHAS input
+	// waiting of CHATCHAS input. If you change the title of the redirected page,
+	// you have to change this setting accordingly.
 	private static final String PAGE_TITLE = "Index of /";
 	private static final String VCODE_SECTION_XPATH = "//div[@class='oauth_login_form']/p[@node-type='validateBox']";
 	private static final String SCREEN_NAME_PROP_KEY = "Current Screent Name";
@@ -290,13 +291,14 @@ public class WeiboUpdated {
 
 		while (iScreenName.hasNext()) {
 			String screenName = null;
-			log.info(String.format("Work on Screen Name[%s]", screenName));
+			
 			if (finished || currentScreenName.isEmpty()) {
 				screenName = iScreenName.next();
 				currentScreenName = screenName;
 			} else {
 				screenName = currentScreenName;
 			}
+			log.info(String.format("Work on Screen Name[%s]", screenName));
 			boolean hasNextPage = true;
 			boolean outOfPeriod = false;
 			int currentPageNum = 1;
@@ -617,7 +619,7 @@ public class WeiboUpdated {
 				.findElementByXPath(VCODE_SECTION_XPATH);
 
 		userIdInput.sendKeys(email, Keys.TAB);
-		passwdInput.sendKeys(password);
+		passwdInput.sendKeys(password, Keys.TAB);
 		passwdInput.submit();
 		try{
 			if (vcodeSectoin.getAttribute("style").isEmpty()) {
