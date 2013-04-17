@@ -30,6 +30,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.regex.Matcher;
@@ -117,9 +118,6 @@ public class WeiboUpdated {
 	private static final int OUTPUT_FILE_KEY_COL_IDX = 0;
 	// the value column index for the output file
 	private static final int OUTPUT_FILE_VALUE_COL_IDX = 1;
-	// The period of months for extracting the status from Weibo. For example,
-	// Last 6 months
-	private static final int PERIOD_OF_MONTHS = 6; // 6 Months
 	// API Key from open.weibo.com
 	private static final String apiKey = "3858201645";
 	// API Secred key from open.weibo.com
@@ -168,6 +166,9 @@ public class WeiboUpdated {
 	
 	// Set to true when you need to collect Weibo data online
 	private static boolean collectStatusOnline = false;
+	// The period of months for extracting the status from Weibo. For example,
+	// Last 6 months
+	private static int periodInMths = 6; // 6 Months
 	
 
 	private static org.apache.log4j.Logger log = Logger
@@ -178,14 +179,32 @@ public class WeiboUpdated {
 		init();
 		// getToken(apiKey, apiSecret, "wesleyhyfu@gmail.com", "Abc123456");
 		String input = "n";
-		Console console = System.console();
+		InputStreamReader isr = new InputStreamReader(System.in);
+		Scanner in = new Scanner(isr);
 		String collectStatusOnlinePrompt = "Are you going to collect status from weibo online? [Y/n] >";
-		input = console.readLine(collectStatusOnlinePrompt);
+		String monthsGoingToCollect = "How many months data are you going to collect? [6] >";
+		System.out.print(collectStatusOnlinePrompt);
+		if(in.hasNext()){
+			input = in.nextLine();
+		}
 		if(input.equals("Y")){
 			collectStatusOnline = true;
+			System.out.print(monthsGoingToCollect);
+			int mth = in.nextInt();
+			if(mth > 0){
+				periodInMths = mth;
+			}
+			log.info(String.format("Collect Data from Weibo with last %d months status", periodInMths));
 		}else{
 			collectStatusOnline = false;
 		}
+		in.close();
+		try {
+			isr.close();
+		} catch (IOException e) {
+			log.error(e.getMessage(), e);
+		}
+		
 		// Start to Analysis
 		if(collectStatusOnline){
 			Timeline timeline = new Timeline();
@@ -423,7 +442,7 @@ public class WeiboUpdated {
 	//					log.info(String.format("Screen Name[%s], Status[%s], Date[%s]", screenName, status.getText(), formatDate(status.getCreatedAt())));
 						// Get the Last #Months Status
 						Months months = calMthsBetween(status);
-						if (months.getMonths() > PERIOD_OF_MONTHS) {
+						if (months.getMonths() > periodInMths) {
 							outOfPeriod = true;
 							// Out of period.
 	//						log.info(String.format("Out of period. Status created at [%s], %s mths ago", formatDate(status.getCreatedAt()), months.getMonths()));
