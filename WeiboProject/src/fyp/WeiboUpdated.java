@@ -66,6 +66,7 @@ import org.scribe.oauth.OAuthService;
 
 import org.joda.time.DateTime;
 import org.joda.time.Months;
+import org.joda.time.Weeks;
 
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.google.gson.Gson;
@@ -74,7 +75,7 @@ import com.google.gson.stream.JsonWriter;
 
 public class WeiboUpdated {
 	private static final String OUTPUT_FILE_KEYWORD_SHEET_NAME = "KeywordCounting";
-	private static final String OUTPUT_FILE_DATE_KEYWORD_SHEET_NAME = "KeywordCountingByMth";
+	private static final String OUTPUT_FILE_DATE_KEYWORD_SHEET_NAME = "KeywordCountingByWk";
 	private static final Token EMPTY_TOKEN = null;
 	// Weibo Timeline, get the number of status per request. Default 50, MAX 200
 	private static final int MAX_STATUS_CNT = 200;
@@ -547,7 +548,10 @@ public class WeiboUpdated {
 		Iterator<Post> iStatuses = statusesList.iterator();
 		while(iStatuses.hasNext()){
 			Post status = iStatuses.next();
-			String dateKey = formatDate(status.getPostCreatedDate(), "yyyy/MM");
+//			String dateKey = formatDate(status.getPostCreatedDate(), "yyyy/MM");
+			DateTime start =  new DateTime(status.getPostCreatedDate());
+			DateTime end = new DateTime();
+			String dateKey = String.format("P%3dW", Weeks.weeksBetween(start, end).getWeeks());
 			Map<String, Map<String, Integer>> keywordsScreenNameMap = dateKeywordsNameMap.get(dateKey);
 			if(keywordsScreenNameMap == null){
 				keywordsScreenNameMap = new HashMap<String, Map<String, Integer>>();
@@ -691,7 +695,7 @@ public class WeiboUpdated {
 					Iterator<String> iScreenNameCnt = screenNameCnt.keySet().iterator();
 					while(iScreenNameCnt.hasNext()){
 						String screenName = iScreenNameCnt.next();
-						sheet.addCell(new Label(col++, row, String.format("%s[%d]", screenName, screenNameCnt.size())));
+						sheet.addCell(new Label(col++, row, String.format("%s[%d]", screenName, screenNameCnt.get(screenName))));
 					}
 				}
 				row++;
