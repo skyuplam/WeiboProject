@@ -211,10 +211,16 @@ public class WeiboUpdated {
 			Timeline timeline = new Timeline();
 			timeline.setToken(renewToken().getToken());
 			collectWeiboStatus(timeline);
-			analysisWeiboStatuses();
+			try {
+				analysisWeiboStatuses();
+			} catch (Exception e) {
+				log.error(e.getMessage(), e);
+			}
 			saveStatuses();
+			readStatusFile(OUTPUT_STATUS_MODIFIED_FILE_NAME);
 		}else{
-			readStatusFile();
+			// Read the analyzed status file
+			readStatusFile(OUTPUT_STATUS_MODIFIED_FILE_NAME);
 			initKeywordStat();
 		}
 		stat();
@@ -223,6 +229,7 @@ public class WeiboUpdated {
 	}
 
 	private static void init() {
+		statusesList = new ArrayList<Post>();
 		nameListPath = getRes(NAME_LIST_FILE_NAME);
 		keywordListPath = getRes(KEYWORD_LIST_FILE_NAME);
 		keywordStat = new HashMap<String, List<Post>>();
@@ -262,17 +269,25 @@ public class WeiboUpdated {
 		}
 	}
 	
-	private static void readStatusFile(){
-		File file = new File(OUTPUT_STATUS_MODIFIED_FILE_NAME);
-		if(!file.exists())
-			return;
+	private static void readStatusFile(String statusFilePath){
+		File file = new File(statusFilePath);
 		try {
+			if(!file.exists()){
+				if(!statusFilePath.equals(OUTPUT_STATUS_FILE_NAME)){
+					readStatusFile(OUTPUT_STATUS_FILE_NAME);
+					analysisWeiboStatuses();
+				}else{
+					throw new IOException(String.format("The File %s does not exist! Please collect the data first.", statusFilePath));
+				}
+			}
 			FileInputStream fis = new FileInputStream(file);
 			statusesList = loadWeiboStatuses(fis);
 			fis.close();
 		} catch (FileNotFoundException e) {
 			log.error(e.getMessage(), e);
 		} catch (IOException e) {
+			log.error(e.getMessage(), e);
+		} catch (Exception e) {
 			log.error(e.getMessage(), e);
 		}
 	}
@@ -296,49 +311,7 @@ public class WeiboUpdated {
 		}
 		return posts;
 	}
-
-//	private static void readKeywordStat(boolean hasHeader) {
-//		if(!LOAD_PREVIOUS_RESULT)
-//			return ;
-//		Workbook wb = null;
-//		Sheet sheet = null;
-//		try {
-//			String filePath = getRes(NAME_LIST_FILE_NAME).getPath().replaceAll(
-//					NAME_LIST_FILE_NAME, OUTPUT_FILE_NAME);
-//			File file = new File(filePath);
-//			if (!file.exists()) {
-//				return;
-//			}
-//			wb = Workbook.getWorkbook(file);
-//			sheet = wb.getSheet(0);
-//		} catch (BiffException e) {
-//			e.printStackTrace();
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		} catch (IndexOutOfBoundsException e) {
-//			e.printStackTrace();
-//		}
-//
-//		// Only Get String Content.
-//		for (int i = 0; i < sheet.getRows(); i++) {
-//			if (hasHeader && i == 0) {
-//				continue;
-//			}
-//
-//			Cell keyCell = sheet.getCell(OUTPUT_FILE_KEY_COL_IDX, i);
-//			Cell freqCell = sheet.getCell(OUTPUT_FILE_VALUE_COL_IDX, i);
-//			if (keyCell.getType() == CellType.LABEL
-//					&& freqCell.getType() == CellType.NUMBER) {
-//				LabelCell lc = (LabelCell) keyCell;
-//				NumberCell freq = (NumberCell) freqCell;
-//				keywordStat.put(lc.getString(), Math.round(freq.getValue()));
-//			}
-//
-//		}
-//
-//		wb.close();
-//	}
-
+	
 	private static void initAccounts() {
 		accounts = new ArrayList<String>();
 		acctMap = new HashMap<String, String>();
@@ -443,10 +416,10 @@ public class WeiboUpdated {
 	//					log.info(String.format("Screen Name[%s], Status[%s], Date[%s]", screenName, status.getText(), formatDate(status.getCreatedAt())));
 						// Get the Last #Months Status
 						Months months = calMthsBetween(status);
-						if (months.getMonths() > periodInMths) {
+						if (months.getMonths() >= periodInMths) {
 							outOfPeriod = true;
 							// Out of period.
-	//						log.info(String.format("Out of period. Status created at [%s], %s mths ago", formatDate(status.getCreatedAt()), months.getMonths()));
+							log.info(String.format("Out of period. Status created at [%s], %s mths ago", formatDate(status.getCreatedAt()), months.getMonths()));
 							break;
 						}
 //						keywordMatching(status.getText());
@@ -454,6 +427,7 @@ public class WeiboUpdated {
 						post.setScreenName(screenName);
 						post.setPostCreatedDate(status.getCreatedAt());
 						post.setPostContent(status.getText());
+						statusesList.add(post);
 						gson.toJson(post, Post.class, writer);
 					}
 	
@@ -484,8 +458,11 @@ public class WeiboUpdated {
 		}
 	}
 	
-	private static void analysisWeiboStatuses(){
+	private static void analysisWeiboStatuses() throws Exception{
 		log.info("Start to analysis keywords");
+		if(statusesList == null){
+			throw new Exception("Empty statusList");
+		}
 		Iterator<Post> iPost = statusesList.iterator();
 		while(iPost.hasNext()){
 			Post post = iPost.next();
@@ -533,7 +510,9 @@ public class WeiboUpdated {
 					.quote(keyword));
 			Matcher matcher = pattern.matcher(post.getPostContent());
 			if (matcher.find()) {
+				// Add keyword to the statusList
 				post.getKeywords().add(keyword);
+				// Add keyword to keywordStat
 				List<Post> status = keywordStat.get(keyword);
 				if(status == null){
 					status = new ArrayList<Post>();
