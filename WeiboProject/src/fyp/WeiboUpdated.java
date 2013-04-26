@@ -1,4 +1,30 @@
 package fyp;
+/* Program Logic:
+ * 1. Initialize all properties
+ * 2. Collect Status Online
+ *    2.1 Get access token
+ *    2.2 Loop through all screen name. 
+ *        For each screen name, get the status within a specific time window.
+ *        For each status, analyze the status by all keywords from the keyword list
+ *        If the request exceeds the limit, usually 150 requests/hour, 
+ *        change to another Weibo testing account and pause for 30 seconds, 
+ *        and then, continue to collect the status.
+ *        In each request, there will be 200 (Max) status collected for each screen name (if any).
+ *        The number of statuses can be changed by MAX_STATUS_CNT. 
+ *        It will pause for 2 seconds for each request for avoiding the IP address being banned by Weibo 
+ *    2.3 Save the status list as a JSON file
+ * 3. Analyze the data by Hash Mapping for statistic
+ * 4. Save the analysis to excel file
+ *     4.1 There are 2 sheets will be saved; Overall Keyword Counting and Keyword Counting by Week
+ *     
+ * Note 1: The technique used to automate the login process.
+ *     Selenium, a browser automation engine, is used to fill the login form with account and password.
+ *     CAPTCHA will not be automated. It means the user needs to input the CAPTCHA manually
+ * Note 2: There is a bandwidth throttling policies for each IP and Weibo Account by Weibo.
+ *     The workarounds: 
+ *     1. Changing account once it meet the account request limit and pausing for 30 seconds
+ *     2. Slowdowning the speed for each request. (2 seconds, tested by try and error)
+ */
 
 import weibo4j.Timeline;
 import weibo4j.model.Paging;
@@ -174,7 +200,13 @@ public class WeiboUpdated {
 
 	private static org.apache.log4j.Logger log = Logger
 			.getLogger(WeiboUpdated.class);
-
+	/*
+	 * There are two options at the begining of the program:
+	 * 1. Collect status online
+	 * 	1.1 Input the number of months data to be collected starting from the run date
+	 * 2. Analyze the data offline
+	 * 
+	 */
 	public static void main(final String[] info) {
 		// Name List Path
 		init();
@@ -227,7 +259,8 @@ public class WeiboUpdated {
 		// Done, write the result to xls file
 		outputResult();
 	}
-
+	
+	// Initialize program properties
 	private static void init() {
 		statusesList = new ArrayList<Post>();
 		nameListPath = getRes(NAME_LIST_FILE_NAME);
@@ -250,6 +283,7 @@ public class WeiboUpdated {
 		}
 	}
 	
+	// Initialize the Keyword statistic from the status list collected from online/offline
 	private static void initKeywordStat(){
 		Iterator<Post> iStatus = statusesList.iterator();
 		while(iStatus.hasNext()){
@@ -269,6 +303,7 @@ public class WeiboUpdated {
 		}
 	}
 	
+	// Read the status file
 	private static void readStatusFile(String statusFilePath){
 		File file = new File(statusFilePath);
 		try {
@@ -292,6 +327,8 @@ public class WeiboUpdated {
 		}
 	}
 	
+	// Load Weibo status from the input stream
+	// Basically, it is used by readStatusFile
 	private static List<Post> loadWeiboStatuses(InputStream in) {
 		List<Post> posts = new ArrayList<Post>();
 		try {
@@ -312,6 +349,7 @@ public class WeiboUpdated {
 		return posts;
 	}
 	
+	// Get the account list form account excel file
 	private static void initAccounts() {
 		accounts = new ArrayList<String>();
 		acctMap = new HashMap<String, String>();
@@ -355,7 +393,8 @@ public class WeiboUpdated {
 
 		iAccounts = accounts.iterator();
 	}
-
+	
+	// Load Properties from property file
 	private static void loadProperties() {
 		if(!LOAD_PREVIOUS_RESULT)
 			return ;
@@ -375,6 +414,7 @@ public class WeiboUpdated {
 		}
 	}
 
+	// Collect status online
 	private static void collectWeiboStatus(Timeline timeline) {
 		Iterator<String> iScreenName = screenNameList.iterator();
 		log.info("Starting Keyword Analysis...");
@@ -458,6 +498,7 @@ public class WeiboUpdated {
 		}
 	}
 	
+	// Loop through all statuses from analyzing
 	private static void analysisWeiboStatuses() throws Exception{
 		log.info("Start to analysis keywords");
 		if(statusesList == null){
@@ -470,6 +511,7 @@ public class WeiboUpdated {
 		}
 	}
 	
+	// Analyze the status by keywords
 	private static void saveStatuses(){
 		File file = new File(OUTPUT_STATUS_MODIFIED_FILE_NAME);
 		log.info(String.format("Update Statuses Json File@%s", OUTPUT_STATUS_MODIFIED_FILE_NAME));
@@ -484,6 +526,7 @@ public class WeiboUpdated {
 		}
 	}
 	
+	// Save the status list to JSON file
 	private static void writerStatusesToJson(OutputStream out, List<Post> statuses){
 		try {
 			JsonWriter writer = new JsonWriter(new OutputStreamWriter(out, "UTF-8"));
@@ -502,6 +545,7 @@ public class WeiboUpdated {
 		}
 	}
 	
+	// Match the status with keyword list
 	private static void matchKeywords(Post post){
 		Iterator<String> iKeyword = keywordList.iterator();
 		while (iKeyword.hasNext()) {
@@ -523,6 +567,7 @@ public class WeiboUpdated {
 		}
 	}
 	
+	// Prepare the statistic data based on Date and sreen name
 	private static void stat(){
 		Iterator<Post> iStatuses = statusesList.iterator();
 		while(iStatuses.hasNext()){
@@ -586,6 +631,10 @@ public class WeiboUpdated {
 		pa.writeProperties(propertiesMap);
 	}
 
+	// Get the status wapper
+	// If the weibo account exceeds the request limit, change to another account
+	// and pause the program for %PAUSE_PERIOD seconds, 30s for example
+	// It will pause for 2 seconds for each request
 	private static StatusWapper getStatusWapper(Timeline timeline,
 			String screenName, int currentPageNum) {
 		StatusWapper statusWapper = null;
@@ -629,6 +678,7 @@ public class WeiboUpdated {
 		}
 	}
 
+	// Output the statistic result to excel file
 	private static void outputResult() {
 		// Result
 		log.info(String.format("Number of Status:%d", statusesList.size()));
@@ -698,6 +748,7 @@ public class WeiboUpdated {
 		}
 	}
 
+	// Statistic sheet grouped by week
 	private static void writeStatistic(WritableSheet sheet2, Map<String, Map<String, Map<String, Integer>>> stat,
 			String col1Name, String col2Name, String col3Name, String col4Name)
 			throws WriteException, RowsExceededException {
@@ -749,6 +800,7 @@ public class WeiboUpdated {
 		return resPath;
 	}
 
+	// Renew the access token with a new account
 	private static Token renewToken() {
 		Token accessToken = null;
 
@@ -779,6 +831,7 @@ public class WeiboUpdated {
 		return months;
 	}
 
+	// read keyword file
 	public static List<String> readKeywords(final File file,
 			final int sheetIdx, final boolean hasHeader) {
 		List<String> keywords = new ArrayList<String>();
@@ -816,6 +869,7 @@ public class WeiboUpdated {
 		return keywords;
 	}
 
+	// read screen name file
 	public static List<String> readScreenNames(final File file,
 			final int sheetIdx, final int screenNameColIdx,
 			final boolean hasHeader) {
@@ -851,6 +905,7 @@ public class WeiboUpdated {
 		return screenNames;
 	}
 
+	// Get the access token
 	public static Token getToken(final String apiKey, final String apiSecret,
 			final String email, final String password) {
 
@@ -872,6 +927,7 @@ public class WeiboUpdated {
 		return service.getAccessToken(EMPTY_TOKEN, verifier);
 	}
 
+	// Use Seleium to simulate a browser to get access code
 	public static String getAccessCode(final String email,
 			final String password, final String authorizationUrl)
 			throws FailingHttpStatusCodeException {
